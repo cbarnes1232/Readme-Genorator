@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-// TODO: Create an array of questions for user input
+// TODO:Array of questions for user input
 
 const promptUser = () => {
   return inquirer
@@ -154,27 +154,17 @@ ${license}
 *Github :${git}
 *LinkedIn :${linkedIn}
 *E-mail :${email}`;
-        createNewFile(title, template);
+        
+createNewFile(title, template);
       }
     );
 };
-// TODO: Create a function to write README file
+// TODO: Function to write README file
 function createNewFile(filename, data) {
   //fs
   fs.writeFile('output.md', data, (error) => {console.log(error)});
 
-    // data,
-    // (err) => {
-    //   if (err) {
-    //     console.log(err);
-    //   }
-    //   console.log("Your README has been generorated.");
-    // };
 }
 
-// TODO: Create a function to initialize app
-function init() {}
-
 promptUser();
-// Function call to initialize app
-init();
+
